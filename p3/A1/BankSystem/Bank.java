@@ -36,12 +36,14 @@ public class Bank {
     }
  
     public static void menu(){
+        System.out.println("-------------------------------------");
         System.out.println("1: Create new account");
         System.out.println("2: Check account balance");
         System.out.println("3: Withdraw money");
         System.out.println("4: Deposit money");
         System.out.println("5: Exit program");
         System.out.println("Insert the option:");
+        System.out.println("-------------------------------------");
     }
     
 }
