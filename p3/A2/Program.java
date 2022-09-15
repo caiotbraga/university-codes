@@ -37,7 +37,12 @@ public class Program {
                     System.out.println("The square area : "+square.calculateArea());
                     break;
                 case 4:
-                    
+                    System.out.print("Insert the rectangle's base: ");
+                    base = in.nextDouble();
+                    System.out.print("Insert the rectangle's height: ");
+                    height = in.nextDouble();
+                    Rectangle rectangle = new Rectangle(base, height, base, height);
+                    System.out.println("The rectangle are : "+rectangle.calculateArea());
                     break;
             }
         } while (op != 5);
