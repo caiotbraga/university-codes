@@ -1,5 +1,6 @@
 public interface Area {
     
-    public void calculateArea(double value);
+    public double calculateArea();
+    
 }
 
