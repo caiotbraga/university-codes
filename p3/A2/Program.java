@@ -17,7 +17,10 @@ public class Program {
             }
             switch (op) {
                 case 1:
-                    
+                    System.out.print("Insert the radius: ");
+                    double radius = in.nextDouble();
+                    Circle circle = new Circle(radius);
+                    System.out.println("The circle area: "+circle.calculateArea());
                     break;
                 case 2:
                     
