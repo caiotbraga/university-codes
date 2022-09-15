@@ -20,10 +20,15 @@ public class Program {
                     System.out.print("Insert the radius: ");
                     double radius = in.nextDouble();
                     Circle circle = new Circle(radius);
-                    System.out.println("The circle area: "+circle.calculateArea());
+                    System.out.printf("The circle area: %.2f\n", circle.calculateArea());
                     break;
                 case 2:
-                    
+                    System.out.print("Insert triangle's base: ");
+                    double base = in.nextDouble();
+                    System.out.print("Insert triangle's height: ");
+                    double height = in.nextDouble();
+                    Triangle triangle = new Triangle(base, height);
+                    System.out.println("The triangle area : "+triangle.calculateArea());
                     break;
                 case 3:
                     System.out.print("Insert the square's side: ");

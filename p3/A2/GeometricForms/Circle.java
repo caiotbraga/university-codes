@@ -8,7 +8,7 @@ public class Circle implements Area{
 
     @Override
     public double calculateArea() {
-        return Math.PI * Math.pow(radius, 2);
+        return Math.PI * Math.pow(this.radius, 2);
     }
     
 }
