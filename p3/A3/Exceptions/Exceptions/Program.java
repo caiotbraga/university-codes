@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Program {
@@ -17,17 +18,26 @@ public class Program {
 
             double sum = obj.Sum(number);
 
-            while (sum <= 100) {
+            while (sum < 100) {
                 System.out.print("Insert another number: ");
                 number = in.nextInt();
                 cont++;
                 sum = obj.Sum(number);
+                if(sum > 100){
+                    throw new OverHundredException();
+                }
                 System.out.println("Number of numbers counted: " + cont);
                 System.out.println("Sum: " + sum);
                 System.out.println("Average: " + sum / cont);
             }
-        } catch (OverHundredException msg) {
+        } catch (InputMismatchException msg) {
             System.out.println(msg.getMessage());
+        }
+        catch(Exception msg){
+            System.out.println(msg.getMessage());
+        }
+        finally{
+            System.out.println("Program ended!");
         }
 
     }

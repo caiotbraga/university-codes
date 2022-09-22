@@ -15,7 +15,7 @@ public class MakeSum{
         }
         else{
             OverHundredException msg;
-            msg = new OverHundredException(number);
+            msg = new OverHundredException();
             throw msg;
         }
     }
