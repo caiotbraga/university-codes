@@ -1,4 +1,4 @@
-import Exceptions.OverHundredException;
+import java.io.ObjectStreamException;
 
 public class MakeSum{
     
@@ -7,6 +7,17 @@ public class MakeSum{
 
     public MakeSum(int number){
         this.number = number;
+    }
+
+    public double Sum(int number) throws OverHundredException{
+        if(this.sum <= 100){
+            return this.sum += number;
+        }
+        else{
+            OverHundredException msg;
+            msg = new OverHundredException(number);
+            throw msg;
+        }
     }
 
 }
