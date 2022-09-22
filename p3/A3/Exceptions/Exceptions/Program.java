@@ -30,10 +30,10 @@ public class Program {
                 System.out.println("Sum: " + sum);
                 System.out.println("Average: " + sum / cont);
             }
-        } catch (InputMismatchException msg) {
-            System.out.println(msg.getMessage());
+        } catch (InputMismatchException  msg) {
+            System.out.println("ERROR! Your input can't be letters or characters");
         }
-        catch(Exception msg){
+        catch(OverHundredException msg){
             System.out.println(msg.getMessage());
         }
         finally{
