@@ -1,10 +1,13 @@
 package store;
-import store.products.*;
 import store.purchases.*;
 import store.person.*;
+import store.product.*;
 
 public class Store {
 
+    public void createUser(String id, String name, int age){
+        User user = new User(id, name, age);
+    }
  
 
 
