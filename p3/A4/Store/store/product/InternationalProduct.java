@@ -1,6 +1,6 @@
 package store.product;
 
-public class InternationalProduct extends Product{
+public class InternationalProduct extends Product {
     
     Double IOF = 0.3;
 
@@ -10,7 +10,7 @@ public class InternationalProduct extends Product{
 
     @Override
     public void calculatePrice() {
-        this.price = price + (price * IOF);
+        this.price = this.price + (this.price * IOF);
     }
 
 }

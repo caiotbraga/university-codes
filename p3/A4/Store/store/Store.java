@@ -3,18 +3,25 @@ import store.purchases.*;
 
 import java.util.ArrayList;
 
+import Exceptions.ExistAccountException;
 import store.person.*;
 import store.product.*;
 
 public class Store {
 
     private UserList userList;
+    private ProductList productList;
 
-    public void createUser(String id, String name, int age){
+    public void createUser(String id, String name, int age) throws ExistAccountException{
         userList.add(new User(id, name, age));
     }
+
+    public createInternationalProduct(String productId, Double price, int quantity){
+        productList.add(new InternationalProduct(productId, price, quantity));
+    }
+
  
-    
+
 
 
 

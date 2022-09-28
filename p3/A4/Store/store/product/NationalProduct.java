@@ -8,6 +8,7 @@ public class NationalProduct extends Product{
 
     @Override
     public void calculatePrice() {
+        this.price = price;
     }
     
 }
