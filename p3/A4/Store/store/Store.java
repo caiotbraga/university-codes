@@ -1,14 +1,20 @@
 package store;
 import store.purchases.*;
+
+import java.util.ArrayList;
+
 import store.person.*;
 import store.product.*;
 
 public class Store {
 
+    private UserList userList;
+
     public void createUser(String id, String name, int age){
-        User user = new User(id, name, age);
+        userList.add(new User(id, name, age));
     }
  
+    
 
 
 
