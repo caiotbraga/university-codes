@@ -3,6 +3,8 @@ package book;
 import java.util.ArrayList;
 import java.util.List;
 
+import Exceptions.DontExistBookException;
+import Exceptions.ExistBookException;
 import Exceptions.ExistProcuctException;
 
 public class BookList {
@@ -13,11 +15,14 @@ public class BookList {
         bookList = new ArrayList();
     }
     
-    public void add(Books book){
+    public void add(Books book) throws ExistBookException{
         if(existBook(book.getBookId()) == true){
-            
+            ExistBookException msg = new ExistBookException();
+            throw msg;
         }
-        bookList.add(book);
+        else{
+            bookList.add(book);
+        }
     }
 
     public boolean existBook(String id){
@@ -26,6 +31,16 @@ public class BookList {
                 return true;
         }
         return false;
+    }
+
+    public void remove(Books book) throws DontExistBookException{
+        if(existBook(book.getBookId()) == false){
+            DontExistBookException msg = new DontExistBookException();
+            throw msg;
+        }
+        else{
+            bookList.remove(book);
+        }
     }
 
     public List<Books> getBookList() {
