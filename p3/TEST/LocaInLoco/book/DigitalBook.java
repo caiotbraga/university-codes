@@ -9,6 +9,12 @@ public class DigitalBook extends Books{
         this.link = link;
     }
 
+    @Override
+    public String description() {
+        
+        return null;
+    }
+
     
 
     

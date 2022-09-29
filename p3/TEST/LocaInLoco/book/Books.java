@@ -1,6 +1,6 @@
 package book;
 
-abstract public class Books {
+abstract public class Books implements Ibook{
 
     protected String id;
     protected String title;
@@ -30,10 +30,7 @@ abstract public class Books {
         return year;
     }
 
-    @Override
-    public String toString() {
-        return "BOOK ID: "+this.id+" | TITLE: "+this.title+" | AUTHOR : "+this.author+" | YEAR: "+this.year;
-    }
+   
     
     
 }
