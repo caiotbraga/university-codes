@@ -1,4 +1,4 @@
-package store.person;
+package person;
 
 import java.util.ArrayList;
 import java.util.List;

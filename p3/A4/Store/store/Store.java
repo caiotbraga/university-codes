@@ -4,6 +4,7 @@ import store.purchases.*;
 import java.util.ArrayList;
 
 import Exceptions.ExistAccountException;
+import Exceptions.ExistProcuctException;
 import store.person.*;
 import store.product.*;
 
@@ -16,9 +17,14 @@ public class Store {
         userList.add(new User(id, name, age));
     }
 
-    public createInternationalProduct(String productId, Double price, int quantity){
+    public  void createInternationalProduct(String productId, Double price, int quantity) throws ExistProcuctException{
         productList.add(new InternationalProduct(productId, price, quantity));
     }
+
+    public void createNationalProduct(String productId, Double price, int quantity) throws ExistProcuctException{
+        productList.add(new NationalProduct(productId, price, quantity));
+    }
+    
 
  
 
