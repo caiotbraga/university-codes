@@ -1,32 +1,36 @@
-package store.product;
+package book;
 
-abstract public class Product implements Iproduct{
+abstract public class Books {
+
+    protected String id;
+    protected String title;
+    protected String author;
+    protected int year;
+
+    public Books(String id, String title, String author, int year) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.year = year;
+    }
+
+    public String getBookId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
     
-    protected String productId;
-    protected Double price;
-    protected int quantity;
-
-    public Product(String productId, Double price, int quantity) {
-        this.productId = productId;
-        this.price = price;
-        this.quantity = quantity;
-    }
-
-    @Override
-    public void calculatePrice() {
-    }
-
-    public String getProductId() {
-        return productId;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
     
     
 }
