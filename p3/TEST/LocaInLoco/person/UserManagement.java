@@ -3,9 +3,10 @@ package person;
 import java.util.ArrayList;
 import java.util.List;
 
+import Exceptions.DontExistAccountException;
 import Exceptions.ExistAccountException;
 
-public class UserList {
+public class UserManagement {
 
     private List<User> userList;
 
@@ -13,23 +14,31 @@ public class UserList {
         return userList;
     }
 
-    public void setUserList(List<User> userList) {
-        this.userList = userList;
-    }
-
-    public UserList() {
+    public UserManagement() {
         this.userList = new ArrayList<>();
     }
 
     public void add(User user) throws ExistAccountException{
-        if(ExistUser(user.getId()) == true){
+        if(existUser(user.getId()) == true){
             ExistAccountException msg = new ExistAccountException();
             throw msg;
         }
-        userList.add(user);
+        else{
+            userList.add(user);
+        }
     }
 
-    public boolean ExistUser(String id){
+    public void remove(User user) throws DontExistAccountException{
+        if(existUser(user.getId()) == true){
+            userList.remove(user);
+        }
+        else{
+           DontExistAccountException msg = new DontExistAccountException();
+            throw msg;
+        }
+    }
+
+    public boolean existUser(String id){
         for (User user : userList) {
             if(user.getId().compareTo(id) == 0)
                 return true;

@@ -5,13 +5,12 @@ import java.util.List;
 
 import Exceptions.DontExistBookException;
 import Exceptions.ExistBookException;
-import Exceptions.ExistProcuctException;
 
-public class BookList {
+public class BookManagement {
 
     private List<Books> bookList;
 
-    public BookList(){
+    public BookManagement(){
         bookList = new ArrayList();
     }
     

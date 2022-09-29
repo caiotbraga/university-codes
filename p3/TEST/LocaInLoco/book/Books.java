@@ -6,12 +6,14 @@ abstract public class Books implements Ibook{
     protected String title;
     protected String author;
     protected int year;
+    protected int quantity;
 
-    public Books(String id, String title, String author, int year) {
+    public Books(String id, String title, String author, int year, int quantity) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.year = year;
+        this.quantity = quantity;
     }
 
     public String getBookId() {
@@ -29,7 +31,10 @@ abstract public class Books implements Ibook{
     public int getYear() {
         return year;
     }
-
+    
+    public int getQuantity(){
+        return quantity;
+    }
    
     
     
