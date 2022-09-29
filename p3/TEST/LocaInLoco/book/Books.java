@@ -30,7 +30,10 @@ abstract public class Books {
         return year;
     }
 
-    
+    @Override
+    public String toString() {
+        return "BOOK ID: "+this.id+" | TITLE: "+this.title+" | AUTHOR : "+this.author+" | YEAR: "+this.year;
+    }
     
     
 }
