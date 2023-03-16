@@ -1,42 +1,51 @@
 package ED2.AVL;
 
-public class Node {
+public class Subtree {
     private Integer key;
-    private Node rightNode;
-    private Node leftNode;
+    private Subtree rightNode;
+    private Subtree leftNode;
     private Integer value;
-    private int size;
+    private int height;
     
-    public Node(Integer key, Integer value, int size) {
+    public Subtree(Integer key, Integer value, int height) {
         this.key = key;
         this.value = value;
         this.rightNode = null;
         this.leftNode = null;
-        this.size = size;
+        this.height = height;
     }
 
     public Integer getKey() {
         return key;
     }
+
     public void setKey(Integer key) {
         this.key = key;
     }
-    public Node getRightNode() {
+
+    public Subtree getRight() {
         return rightNode;
     }
-    public void setRightNode(Node rightNode) {
+
+    public void setRight(Subtree rightNode) {
         this.rightNode = rightNode;
     }
-    public Node getLeftNode() {
+
+    public Subtree getLeft() {
         return leftNode;
     }
-    public void setLeftNode(Node leftNode) {
+
+    public void setLeft(Subtree leftNode) {
         this.leftNode = leftNode;
     }
+
     public Integer getValue() {
         return value;
     }
+
     public void setValue(Integer value) {
         this.value = value;
     }
+
+    
 }
