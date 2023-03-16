@@ -5,12 +5,14 @@ public class Node {
     private Node rightNode;
     private Node leftNode;
     private Integer value;
+    private int size;
     
-    public Node(Integer key, Integer value) {
+    public Node(Integer key, Integer value, int size) {
         this.key = key;
         this.value = value;
         this.rightNode = null;
         this.leftNode = null;
+        this.size = size;
     }
 
     public Integer getKey() {
