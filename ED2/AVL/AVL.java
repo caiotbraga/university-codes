@@ -33,38 +33,61 @@ public class AVL {
         }
     }
 
-    public void put(Integer key, Integer value){
-        this.root = put(key, value, 1);
+    public void put(Integer key){
+        this.root = put(this.root, key, 1);
     }
 
-    private Subtree put(Integer key, Integer value, int size){
+    private Subtree put(Subtree subtree, Integer key, int size){
         if(this.root == null){
-            return new Subtree(key, size);
+            return new Subtree(key, 1);
         }
         int cmp = this.root.getKey().compareTo(key);
-        if(cmp > 0)
-    }
-
-    public int height(){
-        int size = 0;
-        if(this.root == null){
-            return size;
+        if(cmp > 0){
+            Subtree right = subtree.getRight();
+            right = put(subtree.getRight(), key, size);
+            subtree.setRight(right);
+            subtree.setSize(1 + subtree.getSize());
         }
-        return height(this.root);
+        else{
+            Subtree left = subtree.getLeft();
+            left = put(subtree.getLeft(), key, size);
+            subtree.setLeft(left);
+            subtree.setSize(1 + subtree.getSize());
+        }
+        return subtree;
     }
 
-    private int height(Subtree subtree){
+    public int size(){
+        int height = 0;
+        if(this.root == null){
+            return height;
+        }
+        return size(this.root);
+    }
+
+    private int size(Subtree subtree){
         int size = 0;
         if(subtree == null){
             return size;
         }
-        size = height(subtree.getLeft()) + height(subtree.getRight()) + 1;
+        size = size(subtree.getLeft()) + size(subtree.getRight()) + 1;
         return size;
     }
 
-    public int BF(Subtree subtree){
-        return height(subtree.getRight()) - height(subtree.getLeft());
+    public int height(Subtree node){
+        int left;
+        int right;
+        if(node == null){
+            return -1;
+        }else{
+            left = height(node.getLeft());
+            right = height(node.getRight());
+            return Math.max(left, right) + 1;
+        }
     }
 
+    public int BF(Subtree node){
+        return height(node.getRight()) - height(node.getLeft());
+    }
 
 }

@@ -4,15 +4,13 @@ public class Subtree {
     private Integer key;
     private Subtree rightNode;
     private Subtree leftNode;
-    private Integer value;
-    private int height;
-    
-    public Subtree(Integer key, Integer value, int height) {
+    private int size;
+
+    public Subtree(Integer key, int size) {
         this.key = key;
-        this.value = value;
         this.rightNode = null;
         this.leftNode = null;
-        this.height = height;
+        this.size = size;
     }
 
     public Integer getKey() {
@@ -39,13 +37,11 @@ public class Subtree {
         this.leftNode = leftNode;
     }
 
-    public Integer getValue() {
-        return value;
+    public void setSize(int size) {
+        this.size = size;
     }
 
-    public void setValue(Integer value) {
-        this.value = value;
+    public int getSize() {
+        return size;
     }
-
-    
 }
