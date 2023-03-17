@@ -39,7 +39,7 @@ public class AVL {
 
     private Subtree put(Integer key, Integer value, int size){
         if(this.root == null){
-            return new Subtree(key, value, size);
+            return new Subtree(key, size);
         }
         int cmp = this.root.getKey().compareTo(key);
         if(cmp > 0)
